@@ -37,6 +37,33 @@ export default function Home() {
       credential3Title: "Bilingual Advantage",
       credential3Desc:
         "B2 level Spanish speaker who understands your learning journey",
+      // Services section
+      servicesTitle: "How I Help You Master English",
+      servicesSubtitle:
+        "Choose the learning path that fits your goals and schedule",
+      service1Title: "1-on-1 Conversation Practice",
+      service1Desc:
+        "Personalized sessions focused on real-world conversations and building confidence",
+      service1Price: "From $35/hour",
+      service2Title: "Business English",
+      service2Desc:
+        "Professional communication, presentations, and workplace vocabulary",
+      service2Price: "From $45/hour",
+      service3Title: "Pronunciation & Accent",
+      service3Desc:
+        "Targeted practice to improve clarity and reduce Spanish accent interference",
+      service3Price: "From $40/hour",
+      service4Title: "Exam Preparation",
+      service4Desc:
+        "TOEFL, IELTS, and other English proficiency test preparation",
+      service4Price: "From $50/hour",
+      service5Title: "Group Sessions",
+      service5Desc:
+        "Small group classes (2-4 students) for interactive learning",
+      service5Price: "From $25/person",
+      service6Title: "Flexible Online Learning",
+      service6Desc: "Convenient video sessions that fit your busy schedule",
+      service6Price: "All formats available",
     },
     es: {
       name: "James Demlow",
@@ -68,6 +95,34 @@ export default function Home() {
       credential3Title: "Ventaja Bilingüe",
       credential3Desc:
         "Hablo español nivel B2 y entiendo tu proceso de aprendizaje",
+      // Services section
+      servicesTitle: "Cómo Te Ayudo a Dominar el Inglés",
+      servicesSubtitle:
+        "Elige el camino de aprendizaje que se adapte a tus objetivos y horario",
+      service1Title: "Práctica de Conversación 1-a-1",
+      service1Desc:
+        "Sesiones personalizadas enfocadas en conversaciones del mundo real y construcción de confianza",
+      service1Price: "Desde $35/hora",
+      service2Title: "Inglés de Negocios",
+      service2Desc:
+        "Comunicación profesional, presentaciones y vocabulario del lugar de trabajo",
+      service2Price: "Desde $45/hora",
+      service3Title: "Pronunciación y Acento",
+      service3Desc:
+        "Práctica dirigida para mejorar la claridad y reducir la interferencia del acento español",
+      service3Price: "Desde $40/hora",
+      service4Title: "Preparación de Exámenes",
+      service4Desc:
+        "Preparación para TOEFL, IELTS y otras pruebas de competencia en inglés",
+      service4Price: "Desde $50/hora",
+      service5Title: "Sesiones Grupales",
+      service5Desc:
+        "Clases en grupos pequeños (2-4 estudiantes) para aprendizaje interactivo",
+      service5Price: "Desde $25/persona",
+      service6Title: "Aprendizaje Online Flexible",
+      service6Desc:
+        "Sesiones por video convenientes que se adaptan a tu horario ocupado",
+      service6Price: "Todos los formatos disponibles",
     },
   };
 
@@ -295,6 +350,172 @@ export default function Home() {
                 {currentContent.credential3Title}
               </h3>
               <p className="text-gray-300">{currentContent.credential3Desc}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="relative py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl max-w-4xl mx-auto">
+              <h2
+                className={`text-3xl md:text-5xl font-bold text-white mb-6 transition-all duration-500 ${
+                  isAnimating ? "blur-md" : "blur-none"
+                }`}
+              >
+                {currentContent.servicesTitle}
+              </h2>
+              <p
+                className={`text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto transition-all duration-500 ${
+                  isAnimating ? "blur-md" : "blur-none"
+                }`}
+              >
+                {currentContent.servicesSubtitle}
+              </p>
+            </div>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 - Featured/Popular */}
+            <div
+              className={`backdrop-blur-md bg-gradient-to-br from-blue-500/20 to-cyan-500/20 hover:from-blue-500/30 hover:to-cyan-500/30 p-8 rounded-2xl text-center border-2 border-blue-400/30 shadow-2xl group transition-all duration-500 relative ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Popular badge */}
+              <div className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Popular
+              </div>
+
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                💬
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {currentContent.service1Title}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentContent.service1Desc}
+              </p>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {currentContent.service1Price}
+              </div>
+            </div>
+
+            {/* Service 2 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                💼
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {currentContent.service2Title}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentContent.service2Desc}
+              </p>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {currentContent.service2Price}
+              </div>
+            </div>
+
+            {/* Service 3 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                🗣️
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {currentContent.service3Title}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentContent.service3Desc}
+              </p>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {currentContent.service3Price}
+              </div>
+            </div>
+
+            {/* Service 4 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                📝
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {currentContent.service4Title}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentContent.service4Desc}
+              </p>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {currentContent.service4Price}
+              </div>
+            </div>
+
+            {/* Service 5 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                👥
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {currentContent.service5Title}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentContent.service5Desc}
+              </p>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {currentContent.service5Price}
+              </div>
+            </div>
+
+            {/* Service 6 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                💻
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {currentContent.service6Title}
+              </h3>
+              <p className="text-gray-300 mb-6">
+                {currentContent.service6Desc}
+              </p>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {currentContent.service6Price}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 border border-white/10 shadow-2xl max-w-2xl mx-auto">
+              <p className="text-lg text-gray-300 mb-6">
+                Ready to start your English journey? Let&apos;s chat about your
+                goals!
+              </p>
+              <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+                {currentContent.ctaButton}
+              </button>
             </div>
           </div>
         </div>
