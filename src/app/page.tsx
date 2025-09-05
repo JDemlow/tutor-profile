@@ -64,6 +64,46 @@ export default function Home() {
       service6Title: "Flexible Online Learning",
       service6Desc: "Convenient video sessions that fit your busy schedule",
       service6Price: "All formats available",
+      // How It Works section
+      howItWorksTitle: "How My Teaching Process Works",
+      howItWorksSubtitle:
+        "A proven 4-step approach to help you achieve English fluency",
+      step1Title: "Initial Assessment",
+      step1Desc:
+        "We start with a free consultation to understand your current level, goals, and learning style preferences",
+      step2Title: "Customized Learning Plan",
+      step2Desc:
+        "I create a personalized curriculum focused on your specific needs and target areas for improvement",
+      step3Title: "Regular Practice Sessions",
+      step3Desc:
+        "Consistent conversation practice with real-time feedback and cultural context explanations",
+      step4Title: "Progress Tracking",
+      step4Desc:
+        "Regular assessments and plan adjustments to ensure you're always moving toward your goals",
+      // Testimonials section
+      testimonialsTitle: "What My Students Say",
+      testimonialsSubtitle:
+        "Real feedback from Spanish speakers who've improved their English confidence",
+      testimonial1Name: "Maria González",
+      testimonial1Role: "Marketing Manager",
+      testimonial1Text:
+        "James helped me feel confident speaking English in meetings. His conversation practice made all the difference for my career growth.",
+      testimonial1Rating: 5,
+      testimonial2Name: "Carlos Rodríguez",
+      testimonial2Role: "Software Engineer",
+      testimonial2Text:
+        "Finally, an English tutor who understands Spanish speakers! James knows exactly where we struggle and how to fix it naturally.",
+      testimonial2Rating: 5,
+      testimonial3Name: "Ana Martínez",
+      testimonial3Role: "Business Owner",
+      testimonial3Text:
+        "I went from avoiding English calls to leading international presentations. James' method really works!",
+      testimonial3Rating: 5,
+      testimonial4Name: "Diego López",
+      testimonial4Role: "University Student",
+      testimonial4Text:
+        "The pronunciation work was incredible. People now understand me clearly, and I actually enjoy speaking English.",
+      testimonial4Rating: 5,
     },
     es: {
       name: "James Demlow",
@@ -123,6 +163,46 @@ export default function Home() {
       service6Desc:
         "Sesiones por video convenientes que se adaptan a tu horario ocupado",
       service6Price: "Todos los formatos disponibles",
+      // How It Works section
+      howItWorksTitle: "Cómo Funciona Mi Proceso de Enseñanza",
+      howItWorksSubtitle:
+        "Un enfoque probado de 4 pasos para ayudarte a lograr fluidez en inglés",
+      step1Title: "Evaluación Inicial",
+      step1Desc:
+        "Comenzamos con una consulta gratuita para entender tu nivel actual, objetivos y preferencias de estilo de aprendizaje",
+      step2Title: "Plan de Aprendizaje Personalizado",
+      step2Desc:
+        "Creo un currículo personalizado enfocado en tus necesidades específicas y áreas objetivo para mejorar",
+      step3Title: "Sesiones de Práctica Regular",
+      step3Desc:
+        "Práctica de conversación consistente con retroalimentación en tiempo real y explicaciones de contexto cultural",
+      step4Title: "Seguimiento del Progreso",
+      step4Desc:
+        "Evaluaciones regulares y ajustes del plan para asegurar que siempre avances hacia tus objetivos",
+      // Testimonials section
+      testimonialsTitle: "Lo Que Dicen Mis Estudiantes",
+      testimonialsSubtitle:
+        "Comentarios reales de hispanohablantes que han mejorado su confianza en inglés",
+      testimonial1Name: "Maria González",
+      testimonial1Role: "Gerente de Marketing",
+      testimonial1Text:
+        "James me ayudó a sentirme segura hablando inglés en reuniones. Su práctica de conversación marcó toda la diferencia para mi crecimiento profesional.",
+      testimonial1Rating: 5,
+      testimonial2Name: "Carlos Rodríguez",
+      testimonial2Role: "Ingeniero de Software",
+      testimonial2Text:
+        "¡Por fin, un tutor de inglés que entiende a los hispanohablantes! James sabe exactamente dónde tenemos dificultades y cómo solucionarlo naturalmente.",
+      testimonial2Rating: 5,
+      testimonial3Name: "Ana Martínez",
+      testimonial3Role: "Empresaria",
+      testimonial3Text:
+        "Pasé de evitar llamadas en inglés a liderar presentaciones internacionales. ¡El método de James realmente funciona!",
+      testimonial3Rating: 5,
+      testimonial4Name: "Diego López",
+      testimonial4Role: "Estudiante Universitario",
+      testimonial4Text:
+        "El trabajo de pronunciación fue increíble. Ahora la gente me entiende claramente, y realmente disfruto hablar inglés.",
+      testimonial4Rating: 5,
     },
   };
 
@@ -512,6 +592,332 @@ export default function Home() {
               <p className="text-lg text-gray-300 mb-6">
                 Ready to start your English journey? Let&apos;s chat about your
                 goals!
+              </p>
+              <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+                {currentContent.ctaButton}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Testimonials Section - Add this before the How It Works section */}
+      <section className="relative py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl max-w-4xl mx-auto">
+              <h2
+                className={`text-3xl md:text-5xl font-bold text-white mb-6 transition-all duration-500 ${
+                  isAnimating ? "blur-md" : "blur-none"
+                }`}
+              >
+                {currentContent.testimonialsTitle}
+              </h2>
+              <p
+                className={`text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto transition-all duration-500 ${
+                  isAnimating ? "blur-md" : "blur-none"
+                }`}
+              >
+                {currentContent.testimonialsSubtitle}
+              </p>
+            </div>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Testimonial 1 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Stars */}
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(currentContent.testimonial1Rating)].map((_, i) => (
+                  <span key={i} className="text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <blockquote className="text-lg text-gray-300 leading-relaxed mb-6 italic">
+                &ldquo;{currentContent.testimonial1Text}&rdquo;
+              </blockquote>
+
+              {/* Author */}
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg mr-4">
+                  {currentContent.testimonial1Name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-semibold text-white">
+                    {currentContent.testimonial1Name}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {currentContent.testimonial1Role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Stars */}
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(currentContent.testimonial2Rating)].map((_, i) => (
+                  <span key={i} className="text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <blockquote className="text-lg text-gray-300 leading-relaxed mb-6 italic">
+                &ldquo;{currentContent.testimonial2Text}&rdquo;
+              </blockquote>
+
+              {/* Author */}
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg mr-4">
+                  {currentContent.testimonial2Name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-semibold text-white">
+                    {currentContent.testimonial2Name}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {currentContent.testimonial2Role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Stars */}
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(currentContent.testimonial3Rating)].map((_, i) => (
+                  <span key={i} className="text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <blockquote className="text-lg text-gray-300 leading-relaxed mb-6 italic">
+                &ldquo;{currentContent.testimonial3Text}&rdquo;
+              </blockquote>
+
+              {/* Author */}
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg mr-4">
+                  {currentContent.testimonial3Name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-semibold text-white">
+                    {currentContent.testimonial3Name}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {currentContent.testimonial3Role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl border border-white/10 shadow-2xl group transition-all duration-500 ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Stars */}
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(currentContent.testimonial4Rating)].map((_, i) => (
+                  <span key={i} className="text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <blockquote className="text-lg text-gray-300 leading-relaxed mb-6 italic">
+                &ldquo;{currentContent.testimonial4Text}&rdquo;
+              </blockquote>
+
+              {/* Author */}
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg mr-4">
+                  {currentContent.testimonial4Name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-semibold text-white">
+                    {currentContent.testimonial4Name}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {currentContent.testimonial4Role}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 border border-white/10 shadow-2xl max-w-2xl mx-auto">
+              <p className="text-lg text-gray-300 mb-6">
+                Ready to join successful English learners like these?
+              </p>
+              <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+                {currentContent.ctaButton}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* How It Works Section - Add this before closing </main> tag */}
+      <section className="relative py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl max-w-4xl mx-auto">
+              <h2
+                className={`text-3xl md:text-5xl font-bold text-white mb-6 transition-all duration-500 ${
+                  isAnimating ? "blur-md" : "blur-none"
+                }`}
+              >
+                {currentContent.howItWorksTitle}
+              </h2>
+              <p
+                className={`text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto transition-all duration-500 ${
+                  isAnimating ? "blur-md" : "blur-none"
+                }`}
+              >
+                {currentContent.howItWorksSubtitle}
+              </p>
+            </div>
+          </div>
+
+          {/* Steps Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 relative ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Step number */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                1
+              </div>
+
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                📋
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                {currentContent.step1Title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                {currentContent.step1Desc}
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 relative ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Step number */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                2
+              </div>
+
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                🎯
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                {currentContent.step2Title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                {currentContent.step2Desc}
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 relative ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Step number */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                3
+              </div>
+
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                🗣️
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                {currentContent.step3Title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                {currentContent.step3Desc}
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div
+              className={`backdrop-blur-md bg-white/5 hover:bg-white/10 p-8 rounded-2xl text-center border border-white/10 shadow-2xl group transition-all duration-500 relative ${
+                isAnimating ? "blur-md" : "blur-none"
+              }`}
+            >
+              {/* Step number */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                4
+              </div>
+
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                📈
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                {currentContent.step4Title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                {currentContent.step4Desc}
+              </p>
+            </div>
+          </div>
+
+          {/* Process Flow Connector */}
+          <div className="hidden lg:block">
+            <div className="flex justify-center mt-12">
+              <div className="flex items-center space-x-8">
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500/50 to-cyan-500/50"></div>
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500/50 to-cyan-500/50"></div>
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500/50 to-cyan-500/50"></div>
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl p-8 border border-white/10 shadow-2xl max-w-2xl mx-auto">
+              <p className="text-lg text-gray-300 mb-6">
+                Ready to start with a free assessment? Let&apos;s discuss your
+                English goals!
               </p>
               <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
                 {currentContent.ctaButton}
